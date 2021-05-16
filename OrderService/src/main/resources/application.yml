@@ -1,0 +1,30 @@
+spring:
+  zipkin:
+    enabled: true
+    service.name: order-service
+    sender.type: web
+    base-url: http://localhost:9411
+  sleuth:
+    enabled: true
+    sampler:
+      probability: 1.0
+  datasource:
+    driver-class-name: oracle.jdbc.OracleDriver
+    password: spring
+    url: jdbc:oracle:thin:@localhost:1521/XEPDB1
+    username: asha
+  jpa:
+    database-platform: org.hibernate.dialect.Oracle12cDialect
+    hibernate:
+      ddl-auto: update
+      use-new-id-generator-mappings: false
+        application:    name: Order-Service
+    
+server:  port: 9191
+  
+logging:
+  file: 
+    name: C:/Users/ashad/OneDrive/Desktop/logs/spring-cloud.log
+    
+  
+  
